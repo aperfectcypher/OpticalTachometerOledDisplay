@@ -31,7 +31,6 @@ namespace {
   const int DISPLAY_FULL_BRIGHTNESS = 255;
   const int DISPLAY_DIM_BRIGHTNESS = 0;
   
-  const int IR_LED_PIN_3 = 3;
   const int PHOTODIODE_PIN_2 = 2;
   const int INTERRUPT_ZERO_ON_PIN_2 = 0;
   
@@ -88,7 +87,6 @@ void setup() {
   display.setTextColor(WHITE);
   initArrays();
 	
-  turnOnIrLED();
   attachPhotodiodeToInterrruptZero();
   last_sensor_time = millis();
   turnOnDisplay();
@@ -163,10 +161,6 @@ void oledDisplayFullBrightness() {
   is_oled_display_dim = false;
 }
 
-void turnOnIrLED() {
-  pinMode(IR_LED_PIN_3, OUTPUT);
-  digitalWrite(IR_LED_PIN_3, HIGH);
-}
 
 void attachPhotodiodeToInterrruptZero() {
   pinMode(PHOTODIODE_PIN_2, INPUT_PULLUP);
