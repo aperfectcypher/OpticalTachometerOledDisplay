@@ -43,10 +43,10 @@ namespace {
   const int DIAL_LABEL_Y_OFFSET = 6;
   const int DIAL_LABEL_X_OFFSET = 4;
   
-  const long MAJOR_TICKS[] = { 0, 10000, 20000, 30000 };
+  const long MAJOR_TICKS[] = { 0, 5000, 10000, 15000 };
   const int MAJOR_TICK_COUNT = sizeof(MAJOR_TICKS) / sizeof(MAJOR_TICKS[0]);
   const int  MAJOR_TICK_LENGTH = 7;
-  const long MINOR_TICKS[] = {5000, 15000, 25000};
+  const long MINOR_TICKS[] = {2500, 7500, 12500};
   const int MINOR_TICK_COUNT = sizeof(MINOR_TICKS) / sizeof(MINOR_TICKS[0]);
   const int MINOR_TICK_LENGTH = 3;
   
