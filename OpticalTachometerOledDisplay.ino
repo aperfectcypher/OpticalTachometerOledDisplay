@@ -89,6 +89,7 @@ void setup() {
 	
   attachPhotodiodeToInterrruptZero();
   last_sensor_time = millis();
+  display.setRotation(2);
   turnOnDisplay();
 }
 
