@@ -17,7 +17,7 @@ RPM Tachometer with OLED digital and analog display
   #include <Adafruit_SSD1306.h>
 #endif 
 
-#include <Math.h>
+#include <math.h>
 
 namespace {
   const int OLED_RESET = 4;
@@ -78,7 +78,7 @@ namespace {
 #ifdef OLED_TYPE_SH1106
    Adafruit_SH1106 display(OLED_RESET);
 #else
-   Adafruit_SSD1306 display(OLED_RESET);
+   Adafruit_SSD1306 display(OLED_WIDTH, OLED_HEIGHT, &Wire, OLED_RESET);
 #endif
 
 void setup() {
